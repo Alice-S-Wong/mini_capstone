@@ -1,1 +1,10 @@
-{message: "Surf's up dude!"}
+products_array = []
+
+@all_products.map do |product|
+  {
+    name: product.name,
+    price: product.price,
+    image_url: product.image_url,
+    description: product.description
+  }
+end
