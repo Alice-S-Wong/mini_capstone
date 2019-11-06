@@ -1,0 +1,6 @@
+{
+  name: @dragon_egg.name,
+  price: @dragon_egg.price,
+  image_url: @dragon_egg.image_url,
+  description: @dragon_egg.description
+}

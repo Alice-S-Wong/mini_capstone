@@ -1,0 +1,6 @@
+{
+  name: @pandoras_box.name,
+  price: @pandoras_box.price,
+  image_url: @pandoras_box.image_url,
+  description: @pandoras_box.description
+}
