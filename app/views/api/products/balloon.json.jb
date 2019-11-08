@@ -1,6 +1,0 @@
-{
-  name: @balloon.name,
-  price: @balloon.price,
-  image_url: @balloon.image_url,
-  description: @balloon.description
-}

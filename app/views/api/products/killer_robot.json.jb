@@ -1,6 +1,0 @@
-{
-  name: @killer_robot.name,
-  price: @killer_robot.price,
-  image_url: @killer_robot.image_url,
-  description: @killer_robot.description
-}

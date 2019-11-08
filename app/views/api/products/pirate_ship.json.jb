@@ -1,6 +1,0 @@
-{
-  name: @pirate_ship.name,
-  price: @pirate_ship.price,
-  image_url: @pirate_ship.image_url,
-  description: @pirate_ship.description
-}

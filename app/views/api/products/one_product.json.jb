@@ -1,6 +1,0 @@
-{
-  name: @one_product.name,
-  price: @one_product.price,
-  image_url: @one_product.image_url,
-  description: @one_product.description
-}
