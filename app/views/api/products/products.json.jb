@@ -1,6 +1,4 @@
-products_array = []
-
-@all_products.map do |product|
+@products.map do |product|
   {
     name: product.name,
     price: product.price,
