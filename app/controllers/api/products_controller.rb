@@ -18,7 +18,18 @@ class Api::ProductsController < ApplicationController
         image_url: params[:input_image_url],
         description: params[:input_description]
       )
-    # @product.save
+    @product.save
+    render 'show.json.jb'
+  end
+
+  def update
+    user_id = params[:id]
+    @product = Product.find_by(id: user_id)
+    @product.name = params[:input_name]
+    @product.price = params[:input_price]
+    @product.image_url = params[:input_image_url]
+    @product.description = params[:input_description]
+    @product.save
     render 'show.json.jb'
   end
 
