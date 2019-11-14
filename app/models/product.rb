@@ -1,4 +1,7 @@
 class Product < ApplicationRecord
+  validates :name, uniqueness: true
+  validates :description, length: { minimum: 10 }
+  validates :price, numericality: { greater_than_or_equal_to: 1, less_than_or_equal_to: 100 }
   def is_discounted?
     if price < 10
       true
@@ -9,7 +12,6 @@ class Product < ApplicationRecord
   def tax
     tax_rate = 0.09
     tax = price * tax_rate
-    tax = tax.round(2)
     tax
   end
   def total
