@@ -8,6 +8,7 @@
     in_stock: product.in_stock,
     image_url: product.image_url,
     description: product.description,
+    supplier_id: product.supplier_id,
     formatted: {
       price: number_to_currency(product.price),
       tax: number_to_currency(product.tax),

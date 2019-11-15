@@ -6,5 +6,30 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-product = Product.new(name: Faker::Coffee.blend_name, price: rand(2..5), image_url: "none", description: Faker::Coffee.notes)
+product = Product.find_by(id: 2)
+product.supplier_id = 3
+product.save
+
+product = Product.find_by(id: 3)
+product.supplier_id = 3
+product.save
+
+product = Product.find_by(id: 4)
+product.supplier_id = 2
+product.save
+
+product = Product.find_by(id: 5)
+product.supplier_id = 1
+product.save
+
+product = Product.find_by(id: 6)
+product.supplier_id = 1
+product.save
+
+product = Product.find_by(id: 7)
+product.supplier_id = 3
+product.save
+
+product = Product.find_by(id: 10)
+product.supplier_id = 2
 product.save
