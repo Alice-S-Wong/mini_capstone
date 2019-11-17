@@ -6,30 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-product = Product.find_by(id: 2)
-product.supplier_id = 3
-product.save
+image = Image.new(url: "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/7a/8e/5d.jpg", product_id: 1)
+image.save
 
-product = Product.find_by(id: 3)
-product.supplier_id = 3
-product.save
-
-product = Product.find_by(id: 4)
-product.supplier_id = 2
-product.save
-
-product = Product.find_by(id: 5)
-product.supplier_id = 1
-product.save
-
-product = Product.find_by(id: 6)
-product.supplier_id = 1
-product.save
-
-product = Product.find_by(id: 7)
-product.supplier_id = 3
-product.save
-
-product = Product.find_by(id: 10)
-product.supplier_id = 2
-product.save
+image = Image.new(url: "https://images.unsplash.com/photo-1508094902356-db488e227d75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80", product_id: 1)
+image.save
