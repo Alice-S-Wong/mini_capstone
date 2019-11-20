@@ -15,9 +15,9 @@ class Api::ProductsController < ApplicationController
     # else
     #   @products = @products.order(:id)
     # end
-    p "*" * 50
-    p current_user
-    p "*" * 50
+    # p "*" * 50
+    # p current_user
+    # p "*" * 50
     @products = Product.all
     render 'index.json.jb'
   end
