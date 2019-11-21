@@ -19,8 +19,12 @@ class Api::OrdersController < ApplicationController
   end
 
   def index
-    @orders = current_user.orders
-    render 'index.json.jb'
+    if current_user
+      @orders = current_user.orders
+      render 'index.json.jb'
+    else
+      render json: {message: "You must log in first"}, status: :unauthorized
+    end
   end
 
   def show
