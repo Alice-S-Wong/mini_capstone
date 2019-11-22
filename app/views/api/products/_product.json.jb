@@ -11,6 +11,9 @@
     images: product.images.map do |image|
       {url: image.url}
     end,
+    categories: product.categories.map do |category|
+      {name: category.name}
+    end,
     formatted: {
       price: number_to_currency(product.price),
       tax: number_to_currency(product.tax),

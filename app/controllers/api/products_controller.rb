@@ -19,7 +19,12 @@ class Api::ProductsController < ApplicationController
     # p "*" * 50
     # p current_user
     # p "*" * 50
-    @products = Product.all
+    if params[:category]
+      category = Category.find_by(name: params[:category])
+      @products = category.products
+    else
+      @products = Product.all
+    end
     render 'index.json.jb'
   end
 

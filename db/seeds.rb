@@ -6,8 +6,38 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-image = Image.new(url: "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/7a/8e/5d.jpg", product_id: 1)
-image.save
+category_product = CategoryProduct.find(1)
+category_product.category_id = 3
+category_product.save!
 
-image = Image.new(url: "https://images.unsplash.com/photo-1508094902356-db488e227d75?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80", product_id: 1)
-image.save
+category_product = CategoryProduct.find(2)
+category_product.category_id = 1
+category_product.save
+
+category_product = CategoryProduct.find(3)
+category_product.category_id = 3
+category_product.save
+
+category_product = CategoryProduct.find(4)
+category_product.category_id = 1
+category_product.save
+
+category_product = CategoryProduct.find(5)
+category_product.category_id = 3
+category_product.save
+
+category_product = CategoryProduct.find(6)
+category_product.category_id = 1
+category_product.save
+
+category_product = CategoryProduct.find(7)
+category_product.category_id = 3
+category_product.save
+
+category_product = CategoryProduct.find(8)
+category_product.category_id = 2
+category_product.save
+
+category_product = CategoryProduct.find(9)
+category_product.category_id = 2
+category_product.save
