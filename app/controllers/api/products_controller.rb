@@ -1,5 +1,6 @@
 class Api::ProductsController < ApplicationController
 
+  before_action :authenticate_admin, only: [:create, :update, :destroy]
   def index
     #Look at this stuff later?
     # if params[:search]
