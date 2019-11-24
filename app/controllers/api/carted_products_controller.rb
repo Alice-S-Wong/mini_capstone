@@ -23,4 +23,14 @@ class Api::CartedProductsController < ApplicationController
       render json: {message: "You must log in to add items to your cart"}, status: :unauthorized
     end
   end
+
+  def destroy
+    @carted_product = CartedProduct.find(params[:id])
+    if current_user.id == @carted_product.user_id
+      @carted_product.status = "removed"
+      render "show.json.jb"
+    else
+      render json: {message: "Unauthorized to remove item"}, status: :unauthorized
+    end
+  end
 end
