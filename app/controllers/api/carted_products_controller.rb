@@ -5,7 +5,7 @@ class Api::CartedProductsController < ApplicationController
       @cart = @cart.where(user_id: current_user.id)
       render "index.json.jb"
     else
-      render json: {message: "You must log in to add items to your cart"}, status: :unauthorized
+      render json: {message: "You must log in to view items in your cart"}, status: :unauthorized
     end
   end
 
@@ -28,6 +28,7 @@ class Api::CartedProductsController < ApplicationController
     @carted_product = CartedProduct.find(params[:id])
     if current_user.id == @carted_product.user_id
       @carted_product.status = "removed"
+      @carted_product.save
       render "show.json.jb"
     else
       render json: {message: "Unauthorized to remove item"}, status: :unauthorized
