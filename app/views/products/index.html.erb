@@ -1,0 +1,11 @@
+<h1>All Products</h1>
+
+<% @products.map do |product| %>
+  <p>id: <%= product.id %></p>
+  <p>name: <%= product.name %></p>
+  <p>price: <%= product.price %></p>
+  <p>description: <%= product.description %></p>
+  <p>in_stock: <%= product.in_stock %></p>
+  <p>supplier_id: <%= product.supplier_id %></p>
+  <hr>
+<% end %>
