@@ -1,0 +1,14 @@
+<h1>Create a new product</h1>
+
+<form action="/products" method="post">
+  <p>name: <input type="text" name="name"></p>
+  <p>price: <input type="text" name="price"></p>
+  <p>description: <input type="text" name="description"></p>
+  <p>in stock: <input type="text" name="in_stock"></p>
+  <select name="supplier_id">
+    <option value="1">Odds and Ends</option>
+    <option value="2" selected>Doomsday Goods</option>
+    <option value="3">Mystic Items</option>
+  </select>
+  <input type="submit" value="Create product">
+</form>

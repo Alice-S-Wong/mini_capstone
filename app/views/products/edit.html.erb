@@ -1,0 +1,15 @@
+<h1>Update a product</h1>
+
+<form action="/products/<%= @product.id %>" method="post">
+  <input type="hidden" name="_method" value="patch" />
+  <p>name: <input type="text" name="name" value="<%= @product.name %>"></p>
+  <p>price: <input type="text" name="price" value="<%= @product.price %>"></p>
+  <p>description: <input type="text" name="description" value="<%= @product.description %>"></p>
+  <p>in stock: <input type="text" name="in_stock" value="<%= @product.in_stock %>"></p>
+  <select name="supplier_id">
+    <% @suppliers.each do |supplier| %>
+      <option value="<%= supplier.id %>"><%= supplier.name %></option>
+    <% end %>
+  </select>
+  <input type="submit" value="Update product">
+</form>
