@@ -1,6 +1,7 @@
 <h1>All Products</h1>
 
 <% @products.map do |product| %>
+  <p><a href="http://localhost:3000/products/<%= product.id %>">Go to product page</a></p>
   <p>id: <%= product.id %></p>
   <p>name: <%= product.name %></p>
   <p>price: <%= product.price %></p>
