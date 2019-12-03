@@ -4,3 +4,4 @@
 <p>description: <%= @product.description %></p>
 <p>in stock: <%= @product.in_stock %></p>
 <p>supplier: <%= @product.supplier.name %></p>
+<p><a href="http://localhost:3000/products/<%= @product.id %>" data-method="delete">Delete product</a></p>
