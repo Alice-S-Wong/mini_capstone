@@ -39,7 +39,8 @@ class Api::ProductsController < ApplicationController
         name: params[:name],
         price: params[:price],
         description: params[:description],
-        in_stock: params[:in_stock]
+        in_stock: params[:in_stock],
+        supplier_id: params[:supplier_id]
       )
     if @product.save
       render 'show.json.jb'
@@ -55,7 +56,8 @@ class Api::ProductsController < ApplicationController
     @product.price = params[:price] || @product.price
     @product.description = params[:description] || @product.description
     @product.in_stock = params[:in_stock] || @product.in_stock
-    if @product.save
+    @product.supplier_id = params[:supplier_id] || @product.supplier_id
+    if @product.save!
       render 'show.json.jb'
     else
       render json: {errors: @product.errors.full_messages}, status: :unprocessable_entity
